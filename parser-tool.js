@@ -1,7 +1,7 @@
 var encode = document.getElementById("exparseHTML");
 var decode = document.getElementById("exunparseHTML");
 var input = document.getElementById("box-parseunparse");
-var output = document.getElementById("anontr");
+var output = document.getElementById("box-output");
 
 encode.addEventListener("click", function() {
   output.value = encodeString(input.value);
@@ -222,7 +222,7 @@ function decodeString(string) {
     .replace(/&amp;/g, "&")
 }
 function CopyText() {
-  var copyText = document.getElementById("anontr");
+  var copyText = document.getElementById("box-output");
   copyText.select();
   copyText.setSelectionRange(0, 99999)
   document.execCommand("copy");
